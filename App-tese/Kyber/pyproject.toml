@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "kyber"
+version = "1.0.0"
+description = "Implementation of Kyber post-quantum crypto algorithm"
+authors = ["Pyry Lahtinen <pyry@pyry.info>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+numpy = "^1.26.1"
+pycryptodome = "^3.19.0"
+invoke = "^2.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+matplotlib = "^3.8.2"
+pylint = "^3.0.2"
+coverage = "^7.3.2"
+
+# help pytest find modules (https://stackoverflow.com/a/49033954)
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
